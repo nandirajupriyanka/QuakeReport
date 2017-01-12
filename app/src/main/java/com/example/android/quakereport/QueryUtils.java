@@ -47,6 +47,13 @@ public final class QueryUtils {
 
 
         public static String makeHttpRequest(String string) throws IOException {
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             URL url = new URL(string);
             HttpURLConnection httpURLConnection = null;
             InputStream in = null;
